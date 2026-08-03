@@ -1,37 +1,21 @@
-TU GASFÍTER — Landing page (maqueta avanzada para arrancar)
-============================================================
+24-7 GASFÍTER — Sitio web (nuevo diseño)
+=========================================
 
 CONTENIDO
-  index.html        → la página completa (HTML + CSS + JS, sin frameworks)
-  img/              → fotos del cliente ya optimizadas para web
+- index.html      → la página (súbela a la raíz del repo)
+- img/            → hero.jpg, nosotros.jpg, cobertura.jpg
 
-CÓMO PROBARLA
-  Abre index.html en el navegador (doble clic). Todo funciona sin servidor.
+DESPLIEGUE (igual que antes, por Git → Cloudflare Pages)
+  1. Reemplaza el index.html y la carpeta img/ de tu repo con estos.
+  2. git add . && git commit -m "Nuevo diseño" && git push
+  3. Cloudflare Pages redespliega solo en 1-2 minutos.
 
-ANTES DE PUBLICAR — reemplazar estos placeholders:
-  1) Teléfono / WhatsApp: buscar "56912345678" en index.html y cambiarlo
-     por el número real (formato sin +, sin espacios). Aparece en: WhatsApp
-     flotante, CTA del hero, sección contacto y footer.
-  2) Formulario: en el <form> reemplazar TU_WEB3FORMS_ACCESS_KEY por tu
-     access key de web3forms.com. Mientras no la pongas, el formulario
-     muestra el mensaje de éxito (modo demo) sin enviar nada.
-  3) Email de contacto: "contacto@24-7gasfiter.cl" (footer) si corresponde.
-  4) Color: el <body data-palette="rojo"> define la paleta. Opciones:
-     rojo · azul · verde · naranjo · cian · purpura. El selector inferior
-     sirve para que el cliente elija; una vez decidido, fija el data-palette
-     y borra el bloque <div class="palette-bar"> + la sección "Selector de
-     paleta" del JS.
+PENDIENTES ANTES DE PUBLICAR
+- Número de WhatsApp/teléfono: usa +56 9 6243 5613 (56962435613) en toda la
+  página. Verifica que sea el número correcto y que esté operativo.
+- Formulario: usa Web3Forms. Reemplaza TU_WEB3FORMS_ACCESS_KEY por tu access
+  key real (web3forms.com, gratis). Mientras no la pongas, el formulario
+  muestra el mensaje de éxito pero NO envía el correo (modo demo).
+- Correo contacto@24-7gasfiter.cl: créalo con Email Routing en Cloudflare.
 
-FOTOS
-  Las 8 tarjetas de "Servicios" usan íconos (consistente y liviano). Para
-  poner una foto real en una tarjeta, avísame qué foto va en qué servicio.
-  El hero, "Nosotros", "Respaldo" y el mapa ya usan fotos del cliente.
-
-DESPLIEGUE (Cloudflare Pages)
-  Sitio estático puro: sube esta carpeta como proyecto de Pages
-  (build command vacío, output dir = raíz). O git push al repo conectado.
-
-CONTENIDO EDITABLE
-  Servicios, detalles, pasos, comunas y FAQ están en el bloque <script>
-  al final del index.html, en constantes fáciles de editar (SERVICIOS,
-  DETALLES, PASOS, COMUNAS, FAQS).
+Tipografías (Archivo + Oswald) se cargan desde Google Fonts (requiere internet).
