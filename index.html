@@ -26,7 +26,7 @@
   ::placeholder{color:#9a9a9a}
   img{display:block}
   @keyframes mq{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
-  .mq-track{animation:mq 46s linear infinite}
+  .mq-track{animation:mq 46s linear infinite;will-change:transform}
   /* hovers */
   .wa-fab{transition:background .2s,transform .2s}.wa-fab:hover{background:#1fbe5b!important;transform:translateY(-2px)}
   .wa-cta{transition:background .2s,transform .2s}.wa-cta:hover{background:#1fbe5b!important;transform:translateY(-1px)}
@@ -45,7 +45,8 @@
   .faq-item.open .faq-panel{max-height:320px}
   .faq-item.open .faq-sign{transform:rotate(45deg)}
   .faq-sign{transition:transform .25s}
-  @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto}}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important;scroll-behavior:auto}
+    .mq-track{animation:mq 46s linear infinite!important}}
   /* Móvil: el recorte diagonal corta el texto en pantallas angostas — lo suavizamos */
   @media (max-width:640px){
     .hero-clip{clip-path:none!important;-webkit-clip-path:none!important;border-radius:20px;min-height:auto!important}
