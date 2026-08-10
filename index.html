@@ -493,7 +493,7 @@
           <p style="color:#5a5a5a;font-size:16px">Te contactaremos muy pronto. Si es una emergencia, llámanos directo al +56 9 6243 5613.</p>
         </div>
         <form id="contact-form" style="display:flex;flex-direction:column;gap:15px">
-          <input type="hidden" name="access_key" value="TU_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="access_key" value="b26960e6-6549-4a09-b867-1327f1069a31">
           <input type="hidden" name="subject" value="Nueva solicitud desde 24-7gasfiter.cl">
           <input type="hidden" name="from_name" value="24-7 Gasfíter web">
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr));gap:15px">
@@ -623,13 +623,6 @@
     form.addEventListener('submit', async function(e){
       e.preventDefault();
       var btn = form.querySelector('button[type=submit]');
-      var key = form.querySelector('[name=access_key]').value;
-      // Si aún no se configura la key de Web3Forms, mostrar éxito en modo demo
-      if(key === 'TU_WEB3FORMS_ACCESS_KEY'){
-        form.style.display='none';
-        document.getElementById('form-success').style.display='block';
-        return;
-      }
       btn.textContent='ENVIANDO…'; btn.disabled=true;
       try{
         var data = new FormData(form);
